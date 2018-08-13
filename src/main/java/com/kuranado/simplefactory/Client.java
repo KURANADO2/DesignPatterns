@@ -1,4 +1,4 @@
-package com.kuranado.factory;
+package com.kuranado.simplefactory;
 
 /**
  * @Author: Xinling Jing

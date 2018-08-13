@@ -7,8 +7,17 @@ package com.kuranado.facade;
 public class Client {
 
 	public static void main(String[] args) {
-		Facade facade = new Facade();
-		facade.test();
+		//Facade facade = new Facade();
+		//facade.test();
+
+		//--------------------------------
+		//new Presentation().generate();
+		//new Business().generate();
+		//new DAO().generate();
+
+		//--------------------------------
+		new Facade().generate();
+
 	}
 
 }

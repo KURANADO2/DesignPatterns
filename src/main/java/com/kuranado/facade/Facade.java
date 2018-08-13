@@ -6,13 +6,19 @@ package com.kuranado.facade;
  */
 public class Facade {
 
-	public void test() {
-		AModuleApi aModuleApi = new AModuleApiImpl();
-		aModuleApi.testA();
-		BModuleApi bModuleApi = new BModuleApiImpl();
-		bModuleApi.testB();
-		CModuleApi cModuleApi = new CModuleApiImpl();
-		cModuleApi.testC();
+	//public void test() {
+	//	AModuleApi aModuleApi = new AModuleApiImpl();
+	//	aModuleApi.testA();
+	//	BModuleApi bModuleApi = new BModuleApiImpl();
+	//	bModuleApi.testB();
+	//	CModuleApi cModuleApi = new CModuleApiImpl();
+	//	cModuleApi.testC();
+	//}
+
+	public void  generate() {
+		new Presentation().generate();
+		new Business().generate();
+		new DAO().generate();
 	}
 
 }
