@@ -32,7 +32,20 @@ public class Computer {
         private Graphics graphics;
         private HardDisk hardDisk;
 
+        public Builder setCpu(CPU cpu) {
+            this.cpu = cpu;
+            return this;
+        }
 
+        public Builder setGraphics(Graphics graphics) {
+            this.graphics = graphics;
+            return this;
+        }
+
+        public Builder setHardDisk(HardDisk hardDisk) {
+            this.hardDisk = hardDisk;
+            return this;
+        }
 
         Computer build() {
             return new Computer(this);
