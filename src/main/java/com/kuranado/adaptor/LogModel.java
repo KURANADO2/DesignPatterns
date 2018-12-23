@@ -1,18 +1,31 @@
 package com.kuranado.adaptor;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
+ * 日志类
  * @Author: Xinling Jing
- * @Date: 2018/8/3 0003 上午 9:16
+ * @Date: 2018-12-23 19:01
  */
+@Data
 public class LogModel implements Serializable {
 
 	private static final long serialVersionUID = -2324527735778406382L;
 
 	private String logId;
+	/**
+	 * 日志内容
+	 */
 	private String logContent;
+	/**
+	 * 操作人
+	 */
 	private String operateUser;
+	/**
+	 * 操作时间
+	 */
 	private String operateTime;
 
 	public LogModel() {
@@ -23,47 +36,5 @@ public class LogModel implements Serializable {
 		this.logContent = logContent;
 		this.operateUser = operateUser;
 		this.operateTime = operateTime;
-	}
-
-	public String getLogId() {
-		return logId;
-	}
-
-	public void setLogId(String logId) {
-		this.logId = logId;
-	}
-
-	public String getLogContent() {
-		return logContent;
-	}
-
-	public void setLogContent(String logContent) {
-		this.logContent = logContent;
-	}
-
-	public String getOperateUser() {
-		return operateUser;
-	}
-
-	public void setOperateUser(String operateUser) {
-		this.operateUser = operateUser;
-	}
-
-	public String getOperateTime() {
-		return operateTime;
-	}
-
-	public void setOperateTime(String operateTime) {
-		this.operateTime = operateTime;
-	}
-
-	@Override
-	public String toString() {
-		return "LogModel{" +
-				"logId='" + logId + '\'' +
-				", logContent='" + logContent + '\'' +
-				", operateUser='" + operateUser + '\'' +
-				", operateTime='" + operateTime + '\'' +
-				'}';
 	}
 }

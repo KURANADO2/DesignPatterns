@@ -6,18 +6,20 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
 /**
+ *
  * @Author: Xinling Jing
- * @Date: 2018/8/3 0003 上午 9:23
+ * @Date: 2018-12-23 19:10
  */
 public class LogFileOperateApiImpl implements LogFileOperateApi {
 
 	// 默认的日志路径
-	private String logFilePathName = "/AdaptorLog.log";
+	private String logFilePathName = "/Users/jing/Code/GitHub/DesignPatterns/src/main/resources/AdaptorLog.log";
 
 	public LogFileOperateApiImpl(String logFilePathName) {
 		if (logFilePathName != null && logFilePathName.trim().length() > 0) {
@@ -34,8 +36,13 @@ public class LogFileOperateApiImpl implements LogFileOperateApi {
 		try {
 			file = new File(logFilePathName);
 			if (file.exists()) {
-				objectInputStream = new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)));
-				logModels = (List<LogModel>) objectInputStream.readObject();
+				InputStream inputStream = new FileInputStream(file);
+				if (inputStream.available() != 0) {
+					objectInputStream = new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)));
+					logModels = (List<LogModel>) objectInputStream.readObject();
+				} else {
+					return null;
+				}
 			}
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();

@@ -3,8 +3,9 @@ package com.kuranado.adaptor;
 import java.util.List;
 
 /**
+ *
  * @Author: Xinling Jing
- * @Date: 2018/8/7 0007 上午 10:01
+ * @Date: 2018-12-23 19:59
  */
 public class Adapter implements LogDbOperateApi {
 
