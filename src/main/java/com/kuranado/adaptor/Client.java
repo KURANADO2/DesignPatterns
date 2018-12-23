@@ -40,13 +40,6 @@ public class Client {
 		//LogModel logModel = new LogModel("0001", "这是一条测试日志", "JING", "2018-08-03 09:44:35");
 		//LogDbOperateApi logDbOperateApi = new LogDbOperateApiImpl();
 		//logDbOperateApi.createLog(logModel);
-		InputStream inputStream = new FileInputStream(new File("/Users/jing/Code/GitHub/DesignPatterns/src/main/resources/test.txt"));
-		InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-		char[] buff = new char[1024];
-		int len = 0;
-		while ((len = inputStreamReader.read(buff, 0, buff.length)) != -1) {
-			System.out.println(buff, 0, len);
-		}
 
 	}
 
