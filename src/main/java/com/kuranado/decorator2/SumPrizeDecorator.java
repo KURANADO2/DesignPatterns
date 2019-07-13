@@ -18,7 +18,7 @@ public class SumPrizeDecorator extends Decorator {
     public double calcPrize(String user, Date begin, Date end) {
         // 获取前面计算出来的奖金
         double money = super.calcPrize(user, begin, end);
-        // 此处为了简单假定所有员工的累计业务额是 1000000 元
+        // 每个人累计奖金 = 总的回款额 * 0.1% 此处为了简单假定所有员工的累计业务额是 1000000 元
         double prize = 1000000 * 0.001;
         System.out.println(user + "累计奖金:" + prize);
         return money + prize;

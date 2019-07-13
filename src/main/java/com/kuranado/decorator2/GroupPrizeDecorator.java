@@ -19,6 +19,7 @@ public class GroupPrizeDecorator extends Decorator {
         // 获取前面计算出来的奖金
         double money = super.calcPrize(user, begin, end);
         double prize = 0.0;
+        // 团队奖金 = 团队总销售额 * 1%
         for (Map.Entry<String, Double> entry : TempDB.getMonthSaleMoneyMap().entrySet()) {
             prize += entry.getValue();
         }

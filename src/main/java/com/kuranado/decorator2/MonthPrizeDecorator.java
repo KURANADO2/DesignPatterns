@@ -18,6 +18,7 @@ public class MonthPrizeDecorator extends Decorator {
     public double calcPrize(String user, Date begin, Date end) {
         // 获取前面计算出来的奖金
         double money = super.calcPrize(user, begin, end);
+        // 每个人当月业务奖金 = 当月销售额 * 3%
         double prize = TempDB.getMonthSaleMoneyMap().get(user) * 0.03;
         System.out.println(user + "当月奖金:" + prize);
         return money + prize;
