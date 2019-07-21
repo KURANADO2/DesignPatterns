@@ -1,4 +1,4 @@
-package com.kuranado.decorator2;
+package com.kuranado.decorator.decorator2;
 
 /**
  * 使用装饰模式的客户端
@@ -8,6 +8,7 @@ package com.kuranado.decorator2;
 public class Client {
 
     public static void main(String[] args) {
+
         // 创建计算基本奖金的类，也就是被装饰的对象
         Component component = new ConcretComponent();
 

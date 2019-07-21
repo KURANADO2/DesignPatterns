@@ -1,9 +1,9 @@
-package com.kuranado.decorator2;
+package com.kuranado.decorator.decorator2;
 
 import java.util.Date;
 
 /**
- * 计算奖金的构件接口
+ * 计算奖金的组件接口
  *
  * @Author: Xinling Jing
  * @Date: 2019-02-02 15:37

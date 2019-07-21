@@ -1,4 +1,4 @@
-package com.kuranado.facade2;
+package com.kuranado.facade.facade2;
 
 /**
  * 磨酱

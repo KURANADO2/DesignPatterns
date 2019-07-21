@@ -1,4 +1,4 @@
-package com.kuranado.decorator2;
+package com.kuranado.decorator.decorator2;
 
 import java.util.Date;
 import java.util.Map;

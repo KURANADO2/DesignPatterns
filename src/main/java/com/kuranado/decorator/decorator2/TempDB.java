@@ -1,4 +1,4 @@
-package com.kuranado.decorator2;
+package com.kuranado.decorator.decorator2;
 
 import java.util.HashMap;
 import java.util.Map;
