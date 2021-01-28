@@ -8,6 +8,7 @@ public class Client {
 
     public static void main(String[] args) {
 
+        // 纽约时报报纸
         NewsPaper newYorkTimes = new NewsPaper();
 
         Reader reader = new Reader();
@@ -17,10 +18,18 @@ public class Client {
         Reader reader3 = new Reader();
         reader3.setName("小赵");
 
-        newYorkTimes.subscrible(reader);
-        newYorkTimes.subscrible(reader2);
-        newYorkTimes.subscrible(reader3);
+        // 读者订阅报纸
+        newYorkTimes.subscribe(reader);
+        newYorkTimes.subscribe(reader2);
+        newYorkTimes.subscribe(reader3);
 
-        newYorkTimes.setContent("任达华3厘米刀伤");
+        // 纽约时报报纸更新内容
+        newYorkTimes.setContent("任达华 3 厘米刀伤");
+
+        // 小李取消订阅
+        newYorkTimes.unsubscribe(reader);
+
+        // 纽约时报报纸更新内容
+        newYorkTimes.setContent("民航局:春节期间机票可免费退改");
     }
 }
