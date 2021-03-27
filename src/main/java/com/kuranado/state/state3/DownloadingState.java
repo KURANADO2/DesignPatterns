@@ -1,7 +1,5 @@
 package com.kuranado.state.state3;
 
-import com.kuranado.state.state3.StateContext;
-
 /**
  * @author Xinling Jing
  * @version 1.0.0
