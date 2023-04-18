@@ -12,7 +12,8 @@ public class Client {
 
         // 对象存储类型
         String type = "OSS";
-        FileApi fileApi = FileFactory.createFileApi(type);
+        //FileApi fileApi = FileFactory.createFileApi(type);
+        FileApi fileApi = FileFactory2.createFileApi(type);
 
         //FileApi fileApi = null;
         //switch (type.toUpperCase()) {
